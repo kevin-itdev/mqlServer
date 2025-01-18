@@ -1,10 +1,15 @@
 {
-    "name": "vercel-serverless-example",
-    "version": "1.0.0",
-    "type": "module",
-    "main": "handler.js",
-    "scripts": {
-      "start": "vercel dev"
-    },
-    "license": "MIT"
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "handler.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "handler.js"
+    }
+  ]
+}
