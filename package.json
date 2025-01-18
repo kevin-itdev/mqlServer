@@ -1,0 +1,10 @@
+{
+    "name": "vercel-serverless-example",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "api/messages.js",
+    "scripts": {
+      "start": "vercel dev"
+    },
+    "license": "MIT"
+  }
