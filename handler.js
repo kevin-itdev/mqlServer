@@ -1,8 +1,13 @@
-export default async function handler(req, res) {
+const express = require('express');
+const app = express();
+const PORT = 4000;
 
-    if(req.body.path != undefined)
-        { path = req.body.path; console.log(path); }   
+app.get('/home', (req, res) => {
+  res.status(200).json('Welcome, your app is working well');
+});
 
-    console.log('Request received:', req.method);
-    res.status(200).json({ message: 'Hello, world!' });
-}
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
+});
+
+module.exports = app;
