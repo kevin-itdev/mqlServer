@@ -16,7 +16,7 @@ export default async function handler(req, res) {
         const { message, path } = req.body;
         if (message) console.log('Received message:', message);
         if (path) { 
-            console.log('TEST_KEY:', TEST_KEY);
+            console.log('TEST_KEY:', process.env.TEST_KEY);
             console.log('Received path:', path);
         }
             
