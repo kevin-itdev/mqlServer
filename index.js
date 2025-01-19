@@ -15,7 +15,11 @@ export default async function handler(req, res) {
     if (req.method === 'POST') {
         const { message, path } = req.body;
         if (message) console.log('Received message:', message);
-        if (path) console.log('Received path:', path);
+        if (path) { 
+            console.log('TEST_KEY:', TEST_KEY);
+            console.log('Received path:', path);
+        }
+            
 
         return res.status(200).send('Message received.');
     }
